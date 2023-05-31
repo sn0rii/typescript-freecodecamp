@@ -1,5 +1,6 @@
-function addTwo(num: number) {
-  //   return num + 2;
+function addTwo(num: number): number {
+  return num + 2;
+  //   return "hello";
 }
 
 function getUpper(val: string) {
@@ -15,5 +16,16 @@ getUpper("hello");
 
 signUpUser("wojtek", "wojtek@pl.pl", false);
 loginUser("h", "w@2.pl");
+
+// function getValue(myVal: number){
+//   if (myVal > 5) {
+//     return true;
+//   }
+//   return "200 OK";
+// }
+
+const getHello = (s: string): string => {
+  return "";
+};
 
 export {};
