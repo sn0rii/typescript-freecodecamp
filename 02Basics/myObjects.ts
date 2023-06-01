@@ -12,16 +12,34 @@
 //   return { name: "react", price: 399 };
 // }
 
+// type User = {
+//   name: string;
+//   email: string;
+//   isActive: boolean;
+// };
+
+// function createUser(user: User): User {
+//   return { name: "", email: "", isActive: true };
+// }
+
+// createUser({ name: "", email: "", isActive: true });
+
 type User = {
+  readonly _id: string;
   name: string;
   email: string;
   isActive: boolean;
+  cardDetails?: number;
 };
 
-function createUser(user: User): User {
-  return { name: "", email: "", isActive: true };
-}
+let myUser: User = {
+  _id: "1234",
+  name: "w",
+  email: "23@o2.pl",
+  isActive: false,
+};
 
-createUser({ name: "", email: "", isActive: true });
+myUser.email = "qwe@Path2D.pl";
+// myUser._id = "4321";
 
 export {};
