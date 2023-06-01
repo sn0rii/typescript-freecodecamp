@@ -29,7 +29,7 @@ type User = {
   name: string;
   email: string;
   isActive: boolean;
-  cardDetails?: number;
+  creditCardDetails?: number;
 };
 
 let myUser: User = {
@@ -38,6 +38,19 @@ let myUser: User = {
   email: "23@o2.pl",
   isActive: false,
 };
+
+type cardNumber = {
+  cardnumber: string;
+};
+
+type cardDate = {
+  cartDate: string;
+};
+
+type cardDetails = cardNumber &
+  cardDate & {
+    cvv: number;
+  };
 
 myUser.email = "qwe@Path2D.pl";
 // myUser._id = "4321";
