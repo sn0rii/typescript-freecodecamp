@@ -8,7 +8,7 @@
 //   }
 
 class User {
-  private _courseCount = 1;
+  protected _courseCount = 1;
 
   readonly city: string = "Pionki";
   constructor(
@@ -35,6 +35,14 @@ class User {
     this._courseCount = courseNum;
   }
 }
+
+class subUser extends User {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    this._courseCount = 4;
+  }
+}
+
 const wojtek = new User("w@2.pl", "wojtek");
 // wojtek.name
 // wojtek.city = "Warszawa";
